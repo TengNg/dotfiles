@@ -5,9 +5,8 @@ use 'wbthomason/packer.nvim'
     use 'folke/tokyonight.nvim'
 
     use 'nvim-lualine/lualine.nvim'
+    use 'nvim-tree/nvim-tree.lua'
     use 'kyazdani42/nvim-web-devicons'
-
-    use 'preservim/nerdtree'
 
     -- All the things
     use 'neovim/nvim-lspconfig'         -- LSP

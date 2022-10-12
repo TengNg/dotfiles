@@ -5,7 +5,7 @@ local inoremap = keymap.inoremap
 local vnoremap = keymap.vnoremap
 local xnoremap = keymap.xnoremap
 
-nmap('<C-n>', ':NERDTreeToggle<CR>', { silent = true })
+nmap('<C-n>', ':NvimTreeToggle<CR>', { silent = true })
 
 -- Move line up and down in NORMAL and VISUAL modes
 vnoremap('J', ":m '>+1<CR>gv=gv", { silent = true })

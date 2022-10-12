@@ -2,6 +2,7 @@ local o = vim.opt
 local g = vim.g
 
 vim.cmd [[set mouse=a]]
+vim.cmd [[set winbar=%=%m\ %f]]
 
 o.laststatus = 3
 
