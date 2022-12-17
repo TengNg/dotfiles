@@ -1,6 +1,10 @@
-require'nvim-treesitter.configs'.setup {
-    ensure_installed = "all",
+local status, treesitter_configs = pcall(require, "nvim-treesitter.configs")
+if (not status) then return end
+
+treesitter_configs.setup {
+    ensure_installed = { "help", "html", "css", "javascript", "typescript", "c", "java", "python" },
     sync_install = false,
+    auto_install = true,
     highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,

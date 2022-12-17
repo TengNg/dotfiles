@@ -6,28 +6,29 @@ vim.cmd [[set winbar=%=%m\ %f]]
 
 o.laststatus = 3
 
-o.fillchars:append({
-    horiz = '━',
-    horizup = '┻',
-    horizdown = '┳',
-    vert = '┃',
-    vertleft = '┨',
-    vertright = '┣',
-    verthoriz = '╋',
-})
+-- o.fillchars:append({
+--     horiz = '━',
+--     horizup = '┻',
+--     horizdown = '┳',
+--     vert = '┃',
+--     vertleft = '┨',
+--     vertright = '┣',
+--     verthoriz = '╋',
+-- })
 
-o.list = true
-o.listchars = 'eol:¬,trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂'
+-- o.list = true
+-- o.listchars = 'eol:↵'
+-- o.listchars = 'eol:¬,trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂'
 
 o.nu = true
 o.relativenumber = true
-
 o.tabstop = 4
 o.softtabstop = 4
-
 o.shiftwidth = 4
 o.expandtab = true
 o.smartindent = true
+o.splitright = true
+o.splitbelow = true
 
 o.wrap = false
 o.hlsearch = false
@@ -50,4 +51,7 @@ o.shortmess:append("c")
 
 -- o.colorcolumn = "100"
 
-o.completeopt = menuone,noselect
+o.completeopt = menuone,noselect,noinsert
+
+g.netrw_keepdir = 0
+g.netrw_banner = 0

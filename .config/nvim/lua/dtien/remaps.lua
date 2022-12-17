@@ -12,8 +12,6 @@ vnoremap('J', ":m '>+1<CR>gv=gv", { silent = true })
 vnoremap('K', ":m '<-2<CR>gv=gv", { silent = true })
 nnoremap('<leader>j', ":m .+1<CR>", { silent = true })
 nnoremap('<leader>k', ":m .-2<CR>", { silent = true })
--- inoremap('<C-j>', '<esc>:m ,+1<CR>')
--- inoremap('<C-k>', '<esc>:m ,-1<CR>')
 
 -- Adjusting split sizes
 nnoremap("<C-Left>", ":vertical resize +3<CR>", { silent = true })
@@ -26,3 +24,15 @@ nnoremap("<C-h>", "<C-w>h", { silent = true })
 nnoremap("<C-j>", "<C-w>j", { silent = true })
 nnoremap("<C-k>", "<C-w>k", { silent = true })
 nnoremap("<C-l>", "<C-w>l", { silent = true })
+
+-- Keep cursor in the middle
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- So gooooood
+vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
