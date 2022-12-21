@@ -20,7 +20,12 @@ return require('packer').startup(function(use)
     }
 
     -- Treesitter
-    use 'nvim-treesitter/nvim-treesitter'
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            pcall(require('nvim-treesitter.install').update { with_sync = true })
+        end,
+    }
 
     -- LSP
     use {
@@ -46,6 +51,7 @@ return require('packer').startup(function(use)
     }
 
     -- Others
+    use 'theprimeagen/harpoon'          -- file navigator
     use 'onsails/lspkind-nvim'          -- vscode-like pictograms
     use 'nvim-tree/nvim-tree.lua'       -- file explorer
     use 'nvim-lualine/lualine.nvim'     -- statusline
