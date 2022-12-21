@@ -1,5 +1,5 @@
 require("dtien.set")
-require("dtien.remaps")
+require("dtien.remap")
 require("dtien.packer")
 
 -------------------------------------------------
