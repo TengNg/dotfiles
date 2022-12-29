@@ -1,6 +1,5 @@
 local status, cmp = pcall(require, "cmp")
 if (not status) then return end
-local lspkind = require 'lspkind'
 
 cmp.setup {
     snippet = {
@@ -35,9 +34,11 @@ cmp.setup {
             end
         end, { 'i', 's' }),
     },
+
     sources = {
+        { name = 'path' },
         { name = 'nvim_lsp' },
+        { name = 'luasnip' },
         { name = 'buffer' },
-        { name = 'luasnip' }
     },
 }

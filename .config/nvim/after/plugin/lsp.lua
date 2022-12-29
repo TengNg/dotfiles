@@ -6,12 +6,6 @@ lsp.setup()
 
 lsp.set_preferences({
     suggest_lsp_servers = false,
-    setup_servers_on_start = true,
-    set_lsp_keymaps = true,
-    configure_diagnostics = true,
-    cmp_capabilities = true,
-    manage_nvim_cmp = true,
-    call_servers = 'local',
 })
 
 vim.diagnostic.config({
@@ -87,3 +81,7 @@ mason_lspconfig.setup_handlers {
         }
     end,
 }
+
+-- nvim-cmp supports additional completion capabilities, so broadcast that to servers
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
