@@ -51,8 +51,8 @@ return require('packer').startup(function(use)
     }
 
     -- Others
+    use 'lewis6991/gitsigns.nvim'       -- git signs
     use 'theprimeagen/harpoon'          -- file navigator
-    use 'onsails/lspkind-nvim'          -- vscode-like pictograms
     use 'nvim-tree/nvim-tree.lua'       -- file explorer
     use 'nvim-lualine/lualine.nvim'     -- statusline
     use 'kyazdani42/nvim-web-devicons'  -- file/folder Icon
